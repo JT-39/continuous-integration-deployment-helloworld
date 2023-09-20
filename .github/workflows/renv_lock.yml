@@ -13,5 +13,9 @@ jobs:
         with:
           r-version: '4.3.1'
           
+      - name: install-glpk  # Add a custom step to install glpk
+        run: sudo apt-get update && sudo apt-get install -y libglpk40
+        # The above command installs libglpk40 (the glpk library)
+          
       - name: install-renv
         uses: r-lib/actions/setup-renv@v2
